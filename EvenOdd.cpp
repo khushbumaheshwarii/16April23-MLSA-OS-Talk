@@ -1,22 +1,25 @@
-#include<iostream>
+#include <iostream>
+
 using namespace std;
-// 1 -> Even
-// 0 -> Odd
+
 bool isEven(int a)
 {
-    // odd
-    if(a & 1)
-        return 0;
-    // even
-    return 1;
+    if (a % 2 == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 int main()
 {
     int num;
-    cout << "Enter a number: ";
+    cout << "Enter the number to be checked: " << endl;
     cin >> num;
-    if (isEven(num))
-        cout << "Number is Even" << endl;
-    else 
-        cout << "Number is Odd" << endl;
+    if (isEven(num) == true)
+        cout << "Entered number is Even" << endl;
+    else
+        cout << "Entered number is Odd" << endl;
 }
